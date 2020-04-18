@@ -9,6 +9,8 @@ import { FooterComponent } from './shared/footer/footer.component';
 import { CrouselComponent } from './shared/crousel/crousel.component';
 import { AttendanceComponent } from './attendance/attendance.component';
 import { CardsComponent } from './home/cards/cards.component';
+import { CollegeRegComponent } from './forms/college-reg/college-reg.component';
+import { StudentRegComponent } from './forms/student-reg/student-reg.component';
 
 @NgModule({
   declarations: [
@@ -18,7 +20,9 @@ import { CardsComponent } from './home/cards/cards.component';
     FooterComponent,
     CrouselComponent,
     AttendanceComponent,
-    CardsComponent
+    CardsComponent,
+    CollegeRegComponent,
+    StudentRegComponent
   ],
   imports: [
     BrowserModule,
