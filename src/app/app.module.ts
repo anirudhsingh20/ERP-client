@@ -11,6 +11,8 @@ import { AttendanceComponent } from './attendance/attendance.component';
 import { CardsComponent } from './home/cards/cards.component';
 import { CollegeRegComponent } from './forms/college-reg/college-reg.component';
 import { StudentRegComponent } from './forms/student-reg/student-reg.component';
+import { TeacherRegComponent } from './forms/teacher-reg/teacher-reg.component';
+import { LoginComponent } from './forms/login/login.component';
 
 @NgModule({
   declarations: [
@@ -22,7 +24,9 @@ import { StudentRegComponent } from './forms/student-reg/student-reg.component';
     AttendanceComponent,
     CardsComponent,
     CollegeRegComponent,
-    StudentRegComponent
+    StudentRegComponent,
+    TeacherRegComponent,
+    LoginComponent
   ],
   imports: [
     BrowserModule,
