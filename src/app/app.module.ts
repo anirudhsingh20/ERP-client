@@ -11,6 +11,9 @@ import { AttendanceComponent } from './attendance/attendance.component';
 import { CardsComponent } from './home/cards/cards.component';
 import { CollegeRegComponent } from './forms/college-reg/college-reg.component';
 import { StudentRegComponent } from './forms/student-reg/student-reg.component';
+import { ReactiveFormsModule } from '@angular/forms';
+import { HttpClientModule } from '@angular/common/http'
+
 
 @NgModule({
   declarations: [
@@ -26,7 +29,9 @@ import { StudentRegComponent } from './forms/student-reg/student-reg.component';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    ReactiveFormsModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]

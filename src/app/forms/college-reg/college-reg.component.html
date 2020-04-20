@@ -1,9 +1,9 @@
 <div class="container">
-<form>
+<form  [formGroup]="collegeForm" (ngSubmit)="onSubmit()">
     <div class="form-row">
         <div class="form-group col-md-12">
             <label for="inputName">College name</label>
-            <input type="text" class="form-control" id="inputName" placeholder="College Name">
+            <input  type="text" class="form-control" id="inputName"  formControlName="name" placeholder="College Name">
           </div>
       <div class="form-group col-md-6">
         <label for="inputEmail">Email Address</label>
@@ -44,7 +44,7 @@
       </div>
       <div class="form-group col-md-6">
         <label for="inputPhone">Phone number</label>
-        <input type="number" class="form-control" id="inputPhone">
+        <input type="number"  formControlName="phone" class="form-control" id="inputPhone">
       </div>
     </div>
     
