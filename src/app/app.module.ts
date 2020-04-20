@@ -14,6 +14,8 @@ import { StudentRegComponent } from './forms/student-reg/student-reg.component';
 import { ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http'
 
+import { TeacherRegComponent } from './forms/teacher-reg/teacher-reg.component';
+import { LoginComponent } from './forms/login/login.component';
 
 @NgModule({
   declarations: [
@@ -25,7 +27,9 @@ import { HttpClientModule } from '@angular/common/http'
     AttendanceComponent,
     CardsComponent,
     CollegeRegComponent,
-    StudentRegComponent
+    StudentRegComponent,
+    TeacherRegComponent,
+    LoginComponent
   ],
   imports: [
     BrowserModule,

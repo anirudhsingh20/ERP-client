@@ -6,6 +6,8 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./attendance.component.scss']
 })
 export class AttendanceComponent implements OnInit {
+  
+students=['rahul','abhishek','simran','naman','sagar']
 
   constructor() { }
 

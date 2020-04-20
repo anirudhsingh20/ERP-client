@@ -4,12 +4,18 @@ import { CollegeRegComponent } from './forms/college-reg/college-reg.component';
 import { AppComponent } from './app.component';
 import { HomeComponent } from './home/home.component';
 import { StudentRegComponent } from './forms/student-reg/student-reg.component';
+import { TeacherRegComponent } from './forms/teacher-reg/teacher-reg.component';
+import { LoginComponent } from './forms/login/login.component';
+import { AttendanceComponent } from './attendance/attendance.component';
 
 
 const routes: Routes = [
   {path:'',component:HomeComponent},
   {path:'college-signup', component:CollegeRegComponent},
   {path:'student-signup',component:StudentRegComponent},
+  {path:'teacher-signup',component:TeacherRegComponent},
+  {path:'login',component:LoginComponent},
+  {path:'attendance',component:AttendanceComponent},
   {path:'',redirectTo:'',pathMatch:'full'}
 ];
 
