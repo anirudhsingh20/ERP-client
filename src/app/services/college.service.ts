@@ -1,34 +1,59 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { BehaviorSubject } from 'rxjs';
-import { map } from 'rxjs/operators';
+import { map, take, tap } from 'rxjs/operators';
 
 @Injectable({
   providedIn: 'root'
 })
+
+
 export class CollegeService {
 
   url = "http://localhost:8080/"
 
-  constructor(private http:HttpClient) { }
+  constructor(private http: HttpClient) { }
 
-  _college = new BehaviorSubject<any[]>([])
+  _college = new BehaviorSubject<CollegeInterface[]>([])
 
 
-  get college(){
+  get college() {
     return this._college.asObservable();
   }
 
   fetchPost() {
-    return this.http.get<any>(this.url+'get-colleges')
-      .pipe(
-        map(res =>{
-          res.colleges.forEach(col => {
-            console.log(col);
-            
-          });
-        })
-      )
+    console.log('fetching')
+    return this.http.get<CollegeInterface[]>(this.url + 'get-colleges')
+      .subscribe(res => {
+        console.log(res);
+      })
   }
 
+}
+
+export interface AddressInterface {
+  city: String,
+  state: String,
+  street: String, zip: Number
+
+}
+
+export interface FieldsInterface {
+  subBranches: Array<String>,
+   _id: String,
+    name: String
+}
+
+export interface CollegeInterface {
+  address:AddressInterface
+  _id: String
+  name: String
+  email: String
+  password: String
+  maxStudentsPerClass: Number
+  phoneNo: Number
+  fields: Array<FieldsInterface>
+  createdAt: String
+  updatedAt: String
+  __v: 0
 }

@@ -12,7 +12,6 @@ export class CollegeRegComponent implements OnInit {
   constructor(private collegeService :CollegeService) { }
 
   ngOnInit(): void {
-    this.collegeService.fetchPost()
   }
 
    collegeForm = new FormGroup({
@@ -23,6 +22,7 @@ export class CollegeRegComponent implements OnInit {
   onSubmit() {
     // TODO: Use EventEmitter with form value
     console.log(this.collegeForm.value);
+    console.log('clicked')
   }
 
 }

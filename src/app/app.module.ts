@@ -11,11 +11,12 @@ import { AttendanceComponent } from './attendance/attendance.component';
 import { CardsComponent } from './home/cards/cards.component';
 import { CollegeRegComponent } from './forms/college-reg/college-reg.component';
 import { StudentRegComponent } from './forms/student-reg/student-reg.component';
-import { ReactiveFormsModule } from '@angular/forms';
+import { ReactiveFormsModule, FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http'
 
 import { TeacherRegComponent } from './forms/teacher-reg/teacher-reg.component';
 import { LoginComponent } from './forms/login/login.component';
+import { ListComponent } from './college/list/list.component';
 
 @NgModule({
   declarations: [
@@ -29,12 +30,14 @@ import { LoginComponent } from './forms/login/login.component';
     CollegeRegComponent,
     StudentRegComponent,
     TeacherRegComponent,
-    LoginComponent
+    LoginComponent,
+    ListComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     ReactiveFormsModule,
+    FormsModule,
     HttpClientModule
   ],
   providers: [],

@@ -1,5 +1,5 @@
 <div class="container">
-<form class="border border-warning px-5 py-4 mt-md-5 rounded">
+<form [formGroup]="collegeForm" class="border border-warning px-5 py-4 mt-md-5 rounded" (submit)="onSubmit()">
     <div class="form-row">
         <div class="form-group col-md-12">
             <label for="inputName">College name</label>
