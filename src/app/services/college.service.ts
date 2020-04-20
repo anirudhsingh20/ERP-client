@@ -22,11 +22,23 @@ export class CollegeService {
   }
 
   fetchPost() {
-    console.log('fetching')
-    return this.http.get<CollegeInterface[]>(this.url + 'get-colleges')
-      .subscribe(res => {
-        console.log(res);
-      })
+    return this.http.get<{colleges:CollegeInterface[]}>(this.url + 'get-colleges')
+      .pipe(
+        map(res => {
+          let loadedColleges : CollegeInterface[] = []
+          console.log(res.colleges);
+          
+          res.colleges.forEach(col=>{
+            loadedColleges.push(col)
+            console.log(col);
+            
+          })
+          return loadedColleges
+        }),take(1),
+        tap(colleges =>{
+          this._college.next(colleges)
+        })
+      )
   }
 
 }
