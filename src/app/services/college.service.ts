@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { BehaviorSubject } from 'rxjs';
-import { map, take, tap } from 'rxjs/operators';
+import { map, take, tap, retry } from 'rxjs/operators';
 
 @Injectable({
   providedIn: 'root'
@@ -22,11 +22,31 @@ export class CollegeService {
   }
 
   fetchPost() {
-    console.log('fetching')
-    return this.http.get<CollegeInterface[]>(this.url + 'get-colleges')
-      .subscribe(res => {
-        console.log(res);
-      })
+    return this.http.get<{colleges:CollegeInterface[]}>(this.url + 'get-colleges')
+      .pipe(
+        map(res => {
+          let loadedColleges : CollegeInterface[] = []
+          console.log(res.colleges);
+          
+          res.colleges.forEach(col=>{
+            loadedColleges.push(col)
+            console.log(col);
+            
+          })
+          return loadedColleges
+        }),take(1),
+        tap(colleges =>{
+          this._college.next(colleges)
+        })
+      )
+  }
+  addCollege(object:Object){
+    console.log('posted it');
+    
+    return this.http.post(this.url+'college-signup',object).subscribe(res =>{
+      console.log(res);
+      
+    })
   }
 
 }

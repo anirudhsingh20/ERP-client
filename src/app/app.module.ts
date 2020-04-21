@@ -17,6 +17,7 @@ import { HttpClientModule } from '@angular/common/http'
 import { TeacherRegComponent } from './forms/teacher-reg/teacher-reg.component';
 import { LoginComponent } from './forms/login/login.component';
 import { ListComponent } from './college/list/list.component';
+import { ProfileComponent } from './college/profile/profile.component';
 
 @NgModule({
   declarations: [
@@ -31,7 +32,8 @@ import { ListComponent } from './college/list/list.component';
     StudentRegComponent,
     TeacherRegComponent,
     LoginComponent,
-    ListComponent
+    ListComponent,
+    ProfileComponent
   ],
   imports: [
     BrowserModule,
