@@ -44,9 +44,10 @@ export class CollegeRegComponent implements OnInit {
     // formdata.append('maxStudentNo',this.collegeForm.get('maxStudentNo').value)
     // formdata.append('address',this.collegeForm.get('address').value)
     // formdata.append('fields',this.collegeForm.get('fields').value)
-    this.collegeService.addCollege(this.collegeForm.value)
+    // this.collegeService.addCollege(this.collegeForm.value)
     console.log(formdata)
     console.log('clicked')
+    this.collegeForm.reset();
   }
 
 }

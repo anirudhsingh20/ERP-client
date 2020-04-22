@@ -7,6 +7,7 @@ import { StudentRegComponent } from './forms/student-reg/student-reg.component';
 import { TeacherRegComponent } from './forms/teacher-reg/teacher-reg.component';
 import { LoginComponent } from './forms/login/login.component';
 import { AttendanceComponent } from './attendance/attendance.component';
+import { ProfileComponent } from './college/profile/profile.component';
 
 
 const routes: Routes = [
@@ -16,6 +17,7 @@ const routes: Routes = [
   {path:'teacher-signup',component:TeacherRegComponent},
   {path:'login',component:LoginComponent},
   {path:'attendance',component:AttendanceComponent},
+  {path:'profile',component:ProfileComponent},
   {path:'',redirectTo:'',pathMatch:'full'}
 ];
 
