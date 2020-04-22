@@ -1,0 +1,33 @@
+<!-- <div class="container">
+    <div class="card">
+        <h2 class="card-header">Periods</h2>
+        <div class="card-body">
+                <form [formGroup]="form">
+            
+                    <button class="btn btn-primary" (click)="addCreds()">Add</button>
+            
+                    <div formArrayName="credentials" *ngFor="let creds of form.controls.credentials?.value; let i = index">
+                            <div class="form-row" [formGroupName]="i">
+                            <input type="number" formControlName="number" class="form-control col-md-1" value={{i+1}} readonly>
+                            <input type="text" class="form-control col-md-4" placeholder="from" formControlName="from">
+                            <input type="text" class="form-control col-md-4" placeholder="to" formControlName="to">
+                            <input type="text">
+                            <div class="form-group col-md-2" >
+                                <div class="form-check">
+                                    <input type="checkbox" id="checkbox2" class="form-check-input" /> 
+                                    <label class="form-check-label" for="checkbox2">
+                                        Is Break ?
+                                    </label>
+
+                                </div>
+                            </div>
+                            
+        
+                            </div>
+                
+                    </div>
+                </form>
+
+        </div>
+    </div>
+</div> -->
