@@ -18,6 +18,12 @@ import { TeacherRegComponent } from './forms/teacher-reg/teacher-reg.component';
 import { LoginComponent } from './forms/login/login.component';
 import { ListComponent } from './college/list/list.component';
 import { ProfileComponent } from './college/profile/profile.component';
+import { PeriodsComponent } from './college/periods/periods.component';
+import { BargraphComponent } from './graphs/bargraph/bargraph.component';
+import { ChartsModule } from 'ng2-charts';
+import { DoughnutChartComponent } from './graphs/doughnut-chart/doughnut-chart.component';
+import { RadarChartComponent } from './graphs/radar-chart/radar-chart.component';
+import { PieChartComponent } from './graphs/pie-chart/pie-chart.component';
 
 @NgModule({
   declarations: [
@@ -33,14 +39,20 @@ import { ProfileComponent } from './college/profile/profile.component';
     TeacherRegComponent,
     LoginComponent,
     ListComponent,
-    ProfileComponent
+    ProfileComponent,
+    PeriodsComponent,
+    BargraphComponent,
+    DoughnutChartComponent,
+    RadarChartComponent,
+    PieChartComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     ReactiveFormsModule,
     FormsModule,
-    HttpClientModule
+    HttpClientModule,
+    ChartsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
