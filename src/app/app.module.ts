@@ -25,6 +25,7 @@ import { DoughnutChartComponent } from './graphs/doughnut-chart/doughnut-chart.c
 import { RadarChartComponent } from './graphs/radar-chart/radar-chart.component';
 import { PieChartComponent } from './graphs/pie-chart/pie-chart.component';
 import { StudentListComponent } from './student/student-list/student-list.component';
+import { AddDepartmentComponent } from './college/add-department/add-department.component';
 
 @NgModule({
   declarations: [
@@ -46,7 +47,8 @@ import { StudentListComponent } from './student/student-list/student-list.compon
     DoughnutChartComponent,
     RadarChartComponent,
     PieChartComponent,
-    StudentListComponent
+    StudentListComponent,
+    AddDepartmentComponent
   ],
   imports: [
     BrowserModule,
