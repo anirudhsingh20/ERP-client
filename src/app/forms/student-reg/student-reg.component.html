@@ -25,25 +25,39 @@
         <label for="phoneNumber">Phone Number</label>
         <input formControlName="phoneNo" type="text" id="phoneNumber" class="form-control" required>
       </div>
+
     </div>
     <div class="form-row">
           <div class="form-group col-12">
             <label for="collegeName">College Name</label>
             <input formControlName="collegeName" type="text" id="collegeName" class="form-control" required>
           </div>
-          <div class="form-group col-6">
-            <label for="inputBranch">Field</label>
-            <select formControlName="field" id="inputBranch" class="form-control">
-              <option selected>Choose...</option>
-              <option>Btech</option>
-              <option>BCA</option>
-              <option>BAJMC</option>
+          <div class="form-group col-8" *ngIf="fields.length > 0">
+            <label for="selectInput">Field</label>
+            <select formControlName="field" class="form-control form-control">
+              <option selected>Choose Field...</option>
+              <option *ngFor="let field of fields" [value]="field._id">
+                  {{field.name}}
+              </option>
             </select>
+            
           </div>
-        <div class="form-group col-6">
-          <label for="field">Branch</label>
-          <input formControlName="branch" type="text" class="form-control" id="inputField">
-        </div>
+          <div class="form-group col-8" *ngIf="departments.length > 0">
+            <label for="selectInput">Branch</label>
+            <select formControlName="branch" class="form-control form-control">
+              <option selected>Choose Branch...</option>
+              <option *ngFor="let department of departments" [value]="department._id">
+                  {{department.name}}
+              </option>
+            </select>
+
+            
+          </div>
+              <div class="form-group col-8">
+                <label for="semester">Semester</label>
+              <input formControlName="semester" placeholder="Enter semester 1,2,3..." type="text" id="semester" class="form-control" required>
+              </div>
+
 
 
     </div>

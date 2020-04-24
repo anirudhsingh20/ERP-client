@@ -65,12 +65,16 @@ export class DepartmentService {
     return this.http.post(this.url + `add-department`, department)
   }
 
+  addDeptSubjects(department:Object) {
+    return this.http.post(this.url + `add-dept-subjects`, department)
+
+  }
+
 }
 
 export interface DepartmentInterface {
   name: String
   field: String | Object
-  semester: String | Object
 }
 
 export interface FieldInterface {

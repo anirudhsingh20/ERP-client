@@ -14,7 +14,6 @@ export class AddDepartmentComponent implements OnInit {
 
   departmentForm:FormGroup  = new FormGroup({
     name:new FormControl(''),
-    semester:new FormControl(''),
     field: new FormControl('')
 
   })

@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormGroup, FormControl } from '@angular/forms';
 import { StudentService } from 'src/app/services/student.service';
+import { DepartmentService, FieldInterface, DepartmentInterface } from 'src/app/services/department.service';
 
 @Component({
   selector: 'app-student-reg',
@@ -9,10 +10,25 @@ import { StudentService } from 'src/app/services/student.service';
 })
 export class StudentRegComponent implements OnInit {
 
-  constructor(private studentService:StudentService) { }
+  fields: FieldInterface[]=[]
+  departments:DepartmentInterface[]=[]
+  constructor(private studentService:StudentService,private departmentService:DepartmentService) { }
 
   ngOnInit(): void {
+    this.departmentService.fetchFields().subscribe(()=>{
 
+    })
+    this.departmentService.fetchDepartments().subscribe(()=>{
+
+    })
+
+    this.departmentService.departments.subscribe((res)=>{
+      this.departments = res
+    })
+
+    this.departmentService.fields.subscribe(res=>{
+      this.fields = res
+    })
   }
   studentForm= new FormGroup({
                             name:new FormControl(''),
@@ -23,6 +39,7 @@ export class StudentRegComponent implements OnInit {
                             field:new FormControl(''),
                             branch:new FormControl(''),
                             collegeName:new FormControl(''),
+                            semester:new FormControl(''),
                             address:new FormGroup({
                                 city:new FormControl(''),
                                 street:new FormControl(''),

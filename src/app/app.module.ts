@@ -29,6 +29,7 @@ import { CollegeProfileComponent } from './college/college-profile/college-profi
 import { TeacherProfileComponent } from './teacher/teacher-profile/teacher-profile.component';
 import { StudentListComponent } from './student/student-list/student-list.component';
 import { AddDepartmentComponent } from './college/add-department/add-department.component';
+import { AddDeptSubjectComponent } from './college/add-dept-subject/add-dept-subject.component';
 
 @NgModule({
   declarations: [
@@ -54,7 +55,8 @@ import { AddDepartmentComponent } from './college/add-department/add-department.
     CollegeProfileComponent,
     TeacherProfileComponent,
     StudentListComponent,
-    AddDepartmentComponent
+    AddDepartmentComponent,
+    AddDeptSubjectComponent
   ],
   imports: [
     BrowserModule,
