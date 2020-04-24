@@ -38,14 +38,23 @@
             <a class="dropdown-item" routerLink="student-signup">Student Signup</a>
             <a class="dropdown-item" routerLink="teacher-signup">Teacher Signup</a>
             <div class="dropdown-divider"></div>
-            <a class="dropdown-item" href="#">Something else here</a>
+            <a class="dropdown-item text-center" href="#"><i class="fas fa-question"></i></a>
           </div>
         </li>
         <li class="nav-item active">
           <a class="nav-link" routerLink="attendance">attendance <span class="sr-only">(current)</span></a>
         </li>
-        <li class="nav-item active">
-          <a class="nav-link" routerLink="profile">Profile <span class="sr-only">(current)</span></a>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            Profiles
+          </a>
+          <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+            <a class="dropdown-item" routerLink="college-profile">College profile</a>
+            <a class="dropdown-item" routerLink="student-profile">Student profile</a>
+            <a class="dropdown-item" routerLink="teacher-profile">Teacher profile</a>
+            <div class="dropdown-divider"></div>
+            <a class="dropdown-item text-center " href="#"><i class="fas fa-question"></i></a>
+          </div>
         </li>
         <li class="nav-item active">
           <a class="nav-link" routerLink="graphs">Graphs <span class="sr-only">(current)</span></a>

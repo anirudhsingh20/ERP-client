@@ -24,6 +24,9 @@ import { ChartsModule } from 'ng2-charts';
 import { DoughnutChartComponent } from './graphs/doughnut-chart/doughnut-chart.component';
 import { RadarChartComponent } from './graphs/radar-chart/radar-chart.component';
 import { PieChartComponent } from './graphs/pie-chart/pie-chart.component';
+import { StudentProfileComponent } from './student/student-profile/student-profile.component';
+import { CollegeProfileComponent } from './college/college-profile/college-profile.component';
+import { TeacherProfileComponent } from './teacher/teacher-profile/teacher-profile.component';
 import { StudentListComponent } from './student/student-list/student-list.component';
 import { AddDepartmentComponent } from './college/add-department/add-department.component';
 
@@ -47,6 +50,9 @@ import { AddDepartmentComponent } from './college/add-department/add-department.
     DoughnutChartComponent,
     RadarChartComponent,
     PieChartComponent,
+    StudentProfileComponent,
+    CollegeProfileComponent,
+    TeacherProfileComponent
     StudentListComponent,
     AddDepartmentComponent
   ],
