@@ -3,6 +3,7 @@ import { HttpClient } from '@angular/common/http';
 import { AddressInterface } from './college.service';
 import { BehaviorSubject } from 'rxjs';
 import { map, take, tap } from 'rxjs/operators';
+import { LoginInfo } from '../sevices/login.service';
 
 @Injectable({
   providedIn: 'root'
@@ -34,6 +35,10 @@ export class StudentService {
     }
     public addStudent(studentInfo:Object){
       return this.http.post<{students:studentInterface[]}>(this.url+'student-signup',studentInfo)
+    }
+
+    public login(info :LoginInfo){
+     return  this.http.post<studentInterface>(this.url + 'student-login',info)
     }
     
 
