@@ -24,6 +24,9 @@ import { ChartsModule } from 'ng2-charts';
 import { DoughnutChartComponent } from './graphs/doughnut-chart/doughnut-chart.component';
 import { RadarChartComponent } from './graphs/radar-chart/radar-chart.component';
 import { PieChartComponent } from './graphs/pie-chart/pie-chart.component';
+import { StudentProfileComponent } from './student/student-profile/student-profile.component';
+import { CollegeProfileComponent } from './college/college-profile/college-profile.component';
+import { TeacherProfileComponent } from './teacher/teacher-profile/teacher-profile.component';
 
 @NgModule({
   declarations: [
@@ -44,7 +47,10 @@ import { PieChartComponent } from './graphs/pie-chart/pie-chart.component';
     BargraphComponent,
     DoughnutChartComponent,
     RadarChartComponent,
-    PieChartComponent
+    PieChartComponent,
+    StudentProfileComponent,
+    CollegeProfileComponent,
+    TeacherProfileComponent
   ],
   imports: [
     BrowserModule,
