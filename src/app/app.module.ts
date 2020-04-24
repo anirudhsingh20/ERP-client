@@ -27,6 +27,8 @@ import { PieChartComponent } from './graphs/pie-chart/pie-chart.component';
 import { StudentProfileComponent } from './student/student-profile/student-profile.component';
 import { CollegeProfileComponent } from './college/college-profile/college-profile.component';
 import { TeacherProfileComponent } from './teacher/teacher-profile/teacher-profile.component';
+import { StudentListComponent } from './student/student-list/student-list.component';
+import { AddDepartmentComponent } from './college/add-department/add-department.component';
 
 @NgModule({
   declarations: [
@@ -51,6 +53,8 @@ import { TeacherProfileComponent } from './teacher/teacher-profile/teacher-profi
     StudentProfileComponent,
     CollegeProfileComponent,
     TeacherProfileComponent
+    StudentListComponent,
+    AddDepartmentComponent
   ],
   imports: [
     BrowserModule,

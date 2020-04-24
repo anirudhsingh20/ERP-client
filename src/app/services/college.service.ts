@@ -22,30 +22,30 @@ export class CollegeService {
   }
 
   fetchPost() {
-    return this.http.get<{colleges:CollegeInterface[]}>(this.url + 'get-colleges')
+    return this.http.get<{ colleges: CollegeInterface[] }>(this.url + 'get-colleges')
       .pipe(
         map(res => {
-          let loadedColleges : CollegeInterface[] = []
+          let loadedColleges: CollegeInterface[] = []
           console.log(res.colleges);
-          
-          res.colleges.forEach(col=>{
+
+          res.colleges.forEach(col => {
             loadedColleges.push(col)
             console.log(col);
-            
+
           })
           return loadedColleges
-        }),take(1),
-        tap(colleges =>{
+        }), take(1),
+        tap(colleges => {
           this._college.next(colleges)
         })
       )
   }
-  addCollege(object:Object){
+  addCollege(object: Object) {
     console.log('posted it');
-    
-    return this.http.post(this.url+'college-signup',object).subscribe(res =>{
+
+    return this.http.post(this.url + 'college-signup', object).subscribe(res => {
       console.log(res);
-      
+
     })
   }
 
@@ -54,18 +54,19 @@ export class CollegeService {
 export interface AddressInterface {
   city: String,
   state: String,
-  street: String, zip: Number
+  street: String,
+  zip: Number
 
 }
 
 export interface FieldsInterface {
   subBranches: Array<String>,
-   _id: String,
-    name: String
+  _id: String,
+  name: String
 }
 
 export interface CollegeInterface {
-  address:AddressInterface
+  address: AddressInterface
   _id: String
   name: String
   email: String
