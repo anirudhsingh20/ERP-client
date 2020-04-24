@@ -1,30 +1,37 @@
 <div class="container">
-<form [formGroup]="loginForm" class="border border-warning my-md-5 py-5 px-4 rounded" (submit)="onSubmit()">
-    <div class="form-group">
-      <label for="exampleInputEmail1">Email address</label>
-      <input type="email" class="form-control" formControlName="email" id="exampleInputEmail1" aria-describedby="emailHelp">
-      <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+  <div class="card shadow my-5 my-md-5 p-4">
+    <div class="card-header shadow ">
+      <h3 class=" text-center">LOGIN </h3></div>
+    
+    <form [formGroup]="loginForm" class="border border-light bg-light px-5 py-4 mt-md-5 rounded shadow" (submit)="onSubmit()">
+        <div class="form-group">
+          <label for="exampleInputEmail1"><h4>Email address</h4></label>
+          <input type="email" class="form-control" formControlName="email" id="exampleInputEmail1" aria-describedby="emailHelp">
+          <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+        </div>
+        <div class="form-group">
+          <label for="exampleInputPassword1"><h4>Password</h4></label>
+          <input formControlName="password" type="password" class="form-control" id="exampleInputPassword1">
+        </div>
+        <div class="input-group mb-3">
+          <div class="input-group-prepend">
+            <label class="input-group-text" for="inputGroupSelect01">Select Your Category</label>
+          </div>
+          <select formControlName="type" class="custom-select" id="inputGroupSelect01">
+            <option selected></option>
+            <option value="Student">Student</option>
+            <option value="Teacher">Teacher</option>
+            <option value="College">College</option>
+          </select>
+        </div>
+        <br>
+        <div class="row">
+          <div class="col-12 text-center">
+        <button type="submit" class="btn btn-primary w-50 text-center ">Submit</button>
+        </div>
+        </div>
+      </form>
+ 
     </div>
-    <div class="form-group">
-      <label for="exampleInputPassword1">Password</label>
-      <input formControlName="password" type="password" class="form-control" id="exampleInputPassword1">
-    </div>
-    <div class="input-group mb-3">
-      <div class="input-group-prepend">
-        <label class="input-group-text" for="inputGroupSelect01">Select Your Category</label>
-      </div>
-      <select formControlName="type" class="custom-select" id="inputGroupSelect01">
-        <option selected></option>
-        <option value="Student">Student</option>
-        <option value="Teacher">Teacher</option>
-        <option value="College">College</option>
-      </select>
-    </div>
-    <br>
-    <div class="row">
-      <div class="col-12">
-    <button type="submit" class="btn btn-primary">Submit</button>
-    </div>
-    </div>
-  </form>
+
   </div>
