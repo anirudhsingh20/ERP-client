@@ -1,89 +1,93 @@
-<div class="container">
-  <form [formGroup]="studentForm" class=" border border-warning px-5 py-3 mt-md-5 rounded" (submit)="onSubmit()">
-    <div class="form-row mt-md-2">
-      <div class="col-12 py-3">
-        <h3 class="text-center">Student Registeration</h3>
-        <hr>
-      </div>
-      <div class="col-md-4 mb-3">
-        <label for="validationDefault01">Name</label>
-        <input formControlName="name" type="text" class="form-control" id="validationDefault01" required>
-      </div>
-      <div class="col-md-4 mb-3">
-        <label for="validationDefault02">email</label>
-        <input formControlName="email" type="text" class="form-control" id="validationDefault02" required>
-      </div>
-      <div class="col-md-4 mb-3">
-        <label for="password">password</label>
-        <input formControlName="password" type="password" class="form-control" id="password" required>
-      </div>
-      <div class="col-6 ">
-        <label for="rollNumber">Roll number</label>
-        <input formControlName="rollNo" type="text" class="form-control" id="rollNumber">
-      </div>
-      <div class="col-6">
-        <label for="phoneNumber">Phone Number</label>
-        <input formControlName="phoneNo" type="text" id="phoneNumber" class="form-control" required>
-      </div>
+<div class="container ">
+  <div class="card p-md-4 shadow-lg mt-md-3">
+    <div class="col-12 py-3">
+      <h3 class=" card-header shadow text-center bg-light ">Student Registeration</h3>
     </div>
-    <div class="form-row">
-          <div class="form-group col-12">
-            <label for="collegeName">College Name</label>
-            <input formControlName="collegeName" type="text" id="collegeName" class="form-control" required>
-          </div>
-          <div class="form-group col-6">
-            <label for="inputBranch">Field</label>
-            <select formControlName="field" id="inputBranch" class="form-control">
-              <option selected>Choose...</option>
-              <option>Btech</option>
-              <option>BCA</option>
-              <option>BAJMC</option>
-            </select>
-          </div>
-        <div class="form-group col-6">
-          <label for="field">Branch</label>
-          <input formControlName="branch" type="text" class="form-control" id="inputField">
+
+    <form [formGroup]="studentForm" class=" border border-light bg-light shadow px-5 py-5  mt-md-3 rounded" (submit)="onSubmit()">
+      <div class="form-row mt-md-2">
+        <div class="col-md-4 mb-3">
+          <label for="validationDefault01">Name</label>
+          <input formControlName="name" type="text" class="form-control" id="validationDefault01" required>
         </div>
-
-
-    </div>
-    <h3>Address</h3>
-    <hr>
-    <div formGroupName="address" class="form-row">
+        <div class="col-md-4 mb-3">
+          <label for="validationDefault02">email</label>
+          <input formControlName="email" type="text" class="form-control" id="validationDefault02" required>
+        </div>
+        <div class="col-md-4 mb-3">
+          <label for="password">password</label>
+          <input formControlName="password" type="password" class="form-control" id="password" required>
+        </div>
+        <div class="col-6 ">
+          <label for="rollNumber">Roll number</label>
+          <input formControlName="rollNo" type="text" class="form-control" id="rollNumber">
+        </div>
+        <div class="col-6">
+          <label for="phoneNumber">Phone Number</label>
+          <input formControlName="phoneNo" type="text" id="phoneNumber" class="form-control" required>
+        </div>
+      </div>
       <div class="form-row">
-
-        <div class="col-md-4 mb-3">
-          <label for="validationDefault06">street</label>
-          <input formControlName="street" type="text" class="form-control" id="validationDefault06" required>
-        </div>
-
-        <div class="col-md-4 mb-3">
-          <label for="validationDefault03">City</label>
-          <input formControlName="city" type="text" class="form-control" id="validationDefault03" required>
-        </div>
-
-        <div class="col-md-4 mb-3">
-          <label for="validationDefault04">State</label>
-          <input type="text" formControlName="state" class="form-control " id="validationDefaul4" required>
-        </div>
-
-        <div class="col-md-5 mb-3">
-          <label for="validationDefault05">Zip</label>
-          <input formControlName="zip" type="text" class="form-control" id="validationDefault05" required>
-        </div>
-        
+            <div class="form-group col-12">
+              <label for="collegeName">College Name</label>
+              <input formControlName="collegeName" type="text" id="collegeName" class="form-control" required>
+            </div>
+            <div class="form-group col-6">
+              <label for="inputBranch">Field</label>
+              <select formControlName="field" id="inputBranch" class="form-control">
+                <option selected>Choose...</option>
+                <option>Btech</option>
+                <option>BCA</option>
+                <option>BAJMC</option>
+              </select>
+            </div>
+          <div class="form-group col-6">
+            <label for="field">Branch</label>
+            <input formControlName="branch" type="text" class="form-control" id="inputField">
+          </div>
+  
+  
       </div>
-    </div>
-
-    <div class="form-group">
-      <div class="form-check">
-        <input class="form-check-input" type="checkbox" value="" id="invalidCheck2" required>
-        <label class="form-check-label" for="invalidCheck2">
-          Agree to terms and conditions
-        </label>
+      <h3>Address</h3>
+      <hr>
+      <div formGroupName="address" class="form-row">
+        <div class="form-row">
+  
+          <div class="col-md-4 mb-3">
+            <label for="validationDefault06">street</label>
+            <input formControlName="street" type="text" class="form-control" id="validationDefault06" required>
+          </div>
+  
+          <div class="col-md-4 mb-3">
+            <label for="validationDefault03">City</label>
+            <input formControlName="city" type="text" class="form-control" id="validationDefault03" required>
+          </div>
+  
+          <div class="col-md-4 mb-3">
+            <label for="validationDefault04">State</label>
+            <input type="text" formControlName="state" class="form-control " id="validationDefaul4" required>
+          </div>
+  
+          <div class="col-md-5 mb-3">
+            <label for="validationDefault05">Zip</label>
+            <input formControlName="zip" type="text" class="form-control" id="validationDefault05" required>
+          </div>
+          
+        </div>
       </div>
-    </div>
-    <button class="btn btn-primary" type="submit">Submit form</button>
-  </form>
+  
+      <div class="form-group">
+        <div class="form-check">
+          <input class="form-check-input" type="checkbox" value="" id="invalidCheck2" required>
+          <label class="form-check-label" for="invalidCheck2">
+            Agree to terms and conditions
+          </label>
+        </div>
+      </div>
+      <button class="btn btn-primary" type="submit">Submit form</button>
+    </form>
+
+  </div>
+
 
 </div>

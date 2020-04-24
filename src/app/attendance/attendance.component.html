@@ -1,13 +1,22 @@
-<div class=" my-md-5 py-px-5">
-<div class="container">
-    <div *ngFor="let student of students; let i = index" >
-        <div class="row">
-            <div class="col-2">{{i+1}} </div>
-            <div class="col-7  h5">{{student}} </div>
-            <div class="col-3"><label class="switch">
-                <input type="checkbox">
-                <span class="slider round"></span>
-              </label></div>
-        </div>
+<div class="container ">
+    
+    <div class="card m-5">
+        <div class="card-header"><h2 class="text-center ">Attendance</h2></div>
+        
+        <div class=" py-px-5 bg-light">
+        <div class="container">
+            <div *ngFor="let student of students; let i = index" >
+                <div class="row">
+                    <div class="col-2">{{i+1}} </div>
+                    <div class="col-7  h5">{{student}} </div>
+                    <div class="col-3"><label class="switch">
+                        <input type="checkbox">
+                        <span class="slider round"></span>
+                      </label></div>
+                </div>
+            </div>
+        </div></div>
+    
     </div>
-</div></div>
+
+</div>

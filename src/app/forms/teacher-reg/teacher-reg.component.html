@@ -1,60 +1,62 @@
 <div class="container">
-  <form [formGroup]="teacherForm" class=" border border-warning px-5 py-3 mt-md-5 rounded" (submit)="onSubmit()">
-      <div class="form-row mt-md-2">
-          <div class="col-12 py-3">
-              <h3 class="text-center">Teacher Registeration</h3>
-              <hr />
-          </div>
-          <div class="col-md-4 mb-3">
-            <label for="validationDefault01">Name</label>
-            <input formControl="Name" type="text" class="form-control" id="validationDefault01"  required>
-          </div>
-          <div class="col-md-4 mb-3">
-            <label for="validationDefault02">email</label>
-            <input formControl="email" type="text" class="form-control" id="validationDefault02"  required>
-          </div>
-          <div class="col-md-4 mb-3">
-            <label for="password">password</label>
-              <input formControl="password" type="password" class="form-control" id="password" required>
-          </div>
-          <div class="col-6 ">
-            <label for="subject">subject</label>
-            <input formControl="subject" type="text" class="form-control" id="degree" >
-          </div>
-          <div class="col-6">
-            <label for="phoneNumber">Phone Number</label>
-            <input formControl="phoneNumber" type="text"  id="phoneNumber" class="form-control" required>
-          </div>
-      </div>
-      <h3>Address</h3>
-      <div class="form-row" formGroup="Address">
-          <div class="col-md-3 mb-3">
-            <label for="validationDefault03">City</label>
-            <input formControl="city" type="text" class="form-control" id="validationDefault03" required>
-          </div>
-      
-          <div class="col-md-3 mb-3">
-            <label for="validationDefault06">street</label>
-            <input formControl="street" type="text" class="form-control" id="validationDefault06" required>
-          </div>
-          <div class="col-md-3 mb-3">
-            <label for="validationDefault04">State</label>
-            <input type="text" formControl="state" class="form-control" id="validationDefault04" required>
-          </div>
-          <div class="col-md-3 mb-3">
-            <label for="validationDefault05">Zip</label>
-            <input formControl="zip" type="text" class="form-control" id="validationDefault05" required>
-          </div>
+  <div class="card shadow m-5">
+    <div class="card-header px-py-4 shadow m-5 "><h3 class="text-center">Teacher's Registration</h3></div>
+    
+    <form [formGroup]="teacherForm" class=" border border-light bg-light shadow   p-5 my-3 m-5 rounded" (submit)="onSubmit()">
+        <div class="form-row mt-md-2">
+            <div class="col-md-4 mb-3">
+              <label for="validationDefault01">Name</label>
+              <input formControl="Name" type="text" class="form-control" id="validationDefault01"  required>
+            </div>
+            <div class="col-md-4 mb-3">
+              <label for="validationDefault02">email</label>
+              <input formControl="email" type="text" class="form-control" id="validationDefault02"  required>
+            </div>
+            <div class="col-md-4 mb-3">
+              <label for="password">password</label>
+                <input formControl="password" type="password" class="form-control" id="password" required>
+            </div>
+            <div class="col-6 ">
+              <label for="subject">subject</label>
+              <input formControl="subject" type="text" class="form-control" id="degree" >
+            </div>
+            <div class="col-6">
+              <label for="phoneNumber">Phone Number</label>
+              <input formControl="phoneNumber" type="text"  id="phoneNumber" class="form-control" required>
+            </div>
         </div>
-      <div class="form-group">
-          <div class="form-check">
-            <input  class="form-check-input" type="checkbox" value="" id="invalidCheck2" required>
-            <label class="form-check-label" for="invalidCheck2">
-              Agree to terms and conditions
-            </label>
+        <hr>
+        <h3>Address</h3>
+        <div class="form-row" formGroup="Address">
+            <div class="col-md-3 mb-3">
+              <label for="validationDefault03">City</label>
+              <input formControl="city" type="text" class="form-control" id="validationDefault03" required>
+            </div>
+        
+            <div class="col-md-3 mb-3">
+              <label for="validationDefault06">street</label>
+              <input formControl="street" type="text" class="form-control" id="validationDefault06" required>
+            </div>
+            <div class="col-md-3 mb-3">
+              <label for="validationDefault04">State</label>
+              <input type="text" formControl="state" class="form-control" id="validationDefault04" required>
+            </div>
+            <div class="col-md-3 mb-3">
+              <label for="validationDefault05">Zip</label>
+              <input formControl="zip" type="text" class="form-control" id="validationDefault05" required>
+            </div>
           </div>
-      </div>
-      <button class="btn btn-primary" type="submit">Submit form</button>
-    </form>
+        <div class="form-group">
+            <div class="form-check">
+              <input  class="form-check-input" type="checkbox" value="" id="invalidCheck2" required>
+              <label class="form-check-label" for="invalidCheck2">
+                Agree to terms and conditions
+              </label>
+            </div>
+        </div>
+        <button class="btn btn-primary" type="submit">Submit form</button>
+      </form>
+
+  </div>
     </div>
   
