@@ -52,7 +52,7 @@ import { AddDepartmentComponent } from './college/add-department/add-department.
     PieChartComponent,
     StudentProfileComponent,
     CollegeProfileComponent,
-    TeacherProfileComponent
+    TeacherProfileComponent,
     StudentListComponent,
     AddDepartmentComponent
   ],
